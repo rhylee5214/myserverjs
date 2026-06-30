@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DP1LLEP Unity Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,#7b2cff55,transparent 30%),
+    radial-gradient(circle at 80% 80%,#00b7ff33,transparent 35%),
+    radial-gradient(circle at 50% 50%,#ffffff08,transparent 60%);
+    animation:move 12s infinite alternate ease-in-out;
+    z-index:-1;
+}
+
+@keyframes move{
+    from{transform:scale(1);}
+    to{transform:scale(1.2) rotate(8deg);}
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:120px 20px 80px;
+}
+
+h1{
+    font-size:64px;
+    font-weight:800;
+    letter-spacing:3px;
+    background:linear-gradient(90deg,#7b2cff,#00b7ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    color:#cfcfcf;
+    font-size:24px;
+    margin-top:15px;
+}
+
+#activeCounter{
+    margin-top:30px;
+    margin-bottom:25px;
+    margin-right:20px;
+    display:inline-block;
+    padding:18px 45px;
+    font-size:18px;
+    font-weight:700;
+    background:linear-gradient(90deg,#7b2cff,#00b7ff);
+    -webkit-background-clip:text;
+    color:transparent;
+    background-color:#111;
+    border-radius:12px;
+    border:1px solid #222;
+    transition:.3s;
+    box-shadow:0 0 25px #5865F299;
+}
+
+#activeCounter:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 0 35px rgba(123,44,255,0.65),
+        0 0 45px rgba(0,183,255,0.55);
+}
+
+/* Button */
+.join{
+    display:inline-block;
+    margin-top:40px;
+    text-decoration:none;
+    background:#5865F2;
+    color:white;
+    padding:18px 45px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 0 25px #5865F299;
+}
+
+.join:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 40px #5865F2;
+}
+
+/* Sections */
+section{
+    max-width:1300px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:45px;
+    font-weight:700;
+}
+
+/* Cards */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(20,20,20,0.7);
+    backdrop-filter:blur(12px);
+    border:1px solid #2a2a2a;
+    border-radius:20px;
+    padding:35px;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#5865F2;
+    box-shadow:0 0 25px rgba(88,101,242,.35);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#8da2ff;
+    font-size:22px;
+}
+
+.card p{
+    color:#d0d0d0;
+    line-height:1.7;
+}
+
+/* Goals */
+.goals{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.goal{
+    background:#151515;
+    padding:30px 45px;
+    border-radius:18px;
+    border:1px solid #303030;
+    min-width:260px;
+    text-align:center;
+    font-size:22px;
+    transition:.3s;
+}
+
+.goal:hover{
+    border-color:#7b2cff;
+    transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:90px 20px;
+}
+
+footer h2{
+    font-size:38px;
+}
+
+footer p{
+    color:#bdbdbd;
+    margin-top:20px;
+    margin-bottom:35px;
+}
+
+.copy{
+    margin-top:50px;
+    color:#666;
+    font-size:14px;
+}
+.credits{
+    margin-top:5px;
+    color:#666;
+    font-size:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>DP1LLEP Unity Hub</h1>
+
+<div class="subtitle">
+The Ultimate Gorilla Tag & Big Scary Development Community
+</div>
+
+<div id="activeCounter">Active Users: Loading...</div>
+
+<a class="join" href="https://discord.gg/5dc7TwVvVk" target="_blank">
+Join Our Discord
+</a>
+
+</header>
+
+<section>
+
+<div class="title">Why Join Us?</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>📦 Pre-Made Projects</h3>
+<p>Access pre-made Unity projects, templates, and community resources.</p>
+</div>
+
+<div class="card">
+<h3>🎮 Gorilla Tag Projects</h3>
+<p>Find Gorilla Tag inspired Unity projects and collaborate with developers.</p>
+</div>
+
+<div class="card">
+<h3>👻 Big Scary Projects</h3>
+<p>Discover horror and experimental Unity projects shared by members.</p>
+</div>
+
+<div class="card">
+<h3>🛒 Buyable Games</h3>
+<p>Browse games and projects available from server developers.</p>
+</div>
+
+<div class="card">
+<h3>👥 Active Community</h3>
+<p>Meet developers, learn together, ask questions, and improve your skills.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Booster Perks</h3>
+<p>Support the server and unlock exclusive channels and perks.</p>
+</div>
+
+<div class="card">
+<h3>🛡️ Moderator Applications</h3>
+<p>Become part of the staff team and help build the community.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Growing Every Day</h3>
+<p>New resources, members, and opportunities added regularly.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="title">Our Goals</div>
+
+<div class="goals">
+<div class="goal">😊 Build a Happy Community</div>
+<div class="goal">👥 Reach 200 Members</div>
+<div class="goal">⭐ More Boosts</div>
+<div class="goal">📁 Add More Projects</div>
+</div>
+
+</section>
+
+<footer>
+
+<h2>Join DP1LLEP Unity Hub Today!</h2>
+
+<p>Become part of a growing Unity development community filled with projects and collaboration.</p>
+
+<a class="join" href="https://discord.gg/5dc7TwVvVk" target="_blank">Join Now</a>
+
+<div class="copy">© 2026 DP1LLEP Unity Hub</div>
+<div class="credits">Website made by ST3AM</div>
+
+</footer>
+
+<!-- ⭐ FINAL FIXED WEBSOCKET SCRIPT ⭐ -->
+<script>
+    const socket = new WebSocket("wss://myserverjs-1.onrender.com");
+
+    socket.onmessage = (event) => {
+        document.getElementById("activeCounter").innerText =
+            "Active Users: " + event.data;
+    };
+
+    socket.onopen = () => {
+        console.log("Connected to WebSocket server");
+    };
+
+    socket.onerror = (err) => {
+        console.log("WebSocket error:", err);
+    };
+</script>
+
+</body>
+</html>
